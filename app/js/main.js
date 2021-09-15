@@ -1,3 +1,8 @@
-$(function () {
-    $('body').css('background-color', '')
-})
+$(function(){
+
+    $('.products__slider').slick({
+
+    });
+
+
+});
