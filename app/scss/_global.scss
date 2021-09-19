@@ -51,7 +51,6 @@ body {
   margin: 0 auto;
 }
 .page-section {
-  min-height: 100vh;
   background-image: url(../images/page-bg.jpg);
   background-repeat: no-repeat;
   background-position: top center;
@@ -68,6 +67,7 @@ body {
     opacity: 0.15;
   }
   &__wrapper {
+    min-height: 100vh;
     position: relative;
     z-index: 1;
     padding: 75px 0 50px;

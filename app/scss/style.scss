@@ -55,9 +55,6 @@
 // top
 .top {
   background-image: url(../images/top-bg.jpg);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
   &::before{
     content: '';
     position: absolute;
@@ -67,6 +64,10 @@
     left: 0;
     background: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23, 26, 28, 0) 50.28%, rgba(23, 26, 28, 0.00225974) 50.29%, rgba(4, 5, 5, 0.820343) 58.72%, rgba(5, 5, 6, 0.792703) 80.08%, #000000 87.89%);
     opacity: 0.4;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
   }
   &__inner {
     display: flex;
@@ -128,7 +129,6 @@
   &__slider-box {
     position: relative;
     margin-top: 110px;
-    margin-bottom: 138px;
   }
   &__slider-text {
     width: 285px;
@@ -167,44 +167,90 @@
 .benefits {
   &__items {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 15px;
+    padding-left: 25px;
   }
   &__item {
     display: flex;
     align-items: flex-end;
-    width: 600px;
     margin-bottom: 100px;
+    &:nth-child(even) {
+      margin-left: 60px;
+      transform: translateY(20px);
+    }
+  }
+  &__item-1,
+  &__item-3 {
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+  &__item-1 {
+    &::before {
+      height: 47px;
+      width: 245px;
+      top: 33px;
+      right: -55px;
+      background-image: url('../images/line-1.svg');
+    }
+  }
+  &__item-3 {
+    &::before {
+      height: 65px;
+      width: 465px;
+      top: -80px;
+      right: -55px;
+      background-image: url('../images/line-2.svg');
+    }
+    &::after {
+      height: 40px;
+      width: 254px;
+      top: 40px;
+      right: -75px;
+      background-image: url('../images/line-3.svg');
+    }
   }
   &__num {
     @extend %ubuntu-bold;
     font-size: 36px;
     line-height: 41px;
-    margin-right: 8px;
+    margin-right: 10px;
   }
   &__img {
     position: relative;
-    margin-right: 38px;
-    z-index: 10;
+    margin-right: 35px;
     &::before {
       content: '';
       width: 195px;
       height: 130px;
       border: 2px solid #fff;
       position: absolute;
-      top: -15px;
-      right: -17px;
+      top: -12px;
+      right: -12px;
+      z-index: -1;
     }
   }
   &__info {
-    max-width: 600px;
-    &-title {
-      @extend %ubuntu-bold;
-      font-size: 21px;
-      line-height: 24px;
-      margin-bottom: 10px;
+    width: 300px;
     }
+  
+  &__info-title {
+    width: 137px;
+    @extend %ubuntu-bold;
+    font-size: 21px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  &__info-text {
+    @extend %ubuntu-light;
+    font-size: 15px;
+    line-height: 19px;
   }
 }
 
