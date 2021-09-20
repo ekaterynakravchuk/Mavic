@@ -179,41 +179,47 @@
       margin-left: 60px;
       transform: translateY(20px);
     }
-  }
-  &__item-1,
-  &__item-3 {
+    &:nth-child(3) {
+      margin-left: 30px;
+    }
+    &:nth-child(4) {
+      margin-left: 64px;
+    }
+    &:first-child,
+    &:nth-child(3) {
     position: relative;
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      background-repeat: no-repeat;
-      background-position: 0 0;
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
     }
-  }
-  &__item-1 {
-    &::before {
-      height: 47px;
-      width: 245px;
-      top: 33px;
-      right: -55px;
-      background-image: url('../images/line-1.svg');
+    &:first-child {
+      &::before {
+        height: 47px;
+        width: 245px;
+        top: 33px;
+        right: -55px;
+        background-image: url('../images/line-1.svg');
+      }
     }
-  }
-  &__item-3 {
-    &::before {
-      height: 65px;
-      width: 465px;
-      top: -80px;
-      right: -55px;
-      background-image: url('../images/line-2.svg');
-    }
-    &::after {
-      height: 40px;
-      width: 254px;
-      top: 40px;
-      right: -75px;
-      background-image: url('../images/line-3.svg');
+    &:nth-child(3) {
+      &::before {
+        height: 65px;
+        width: 465px;
+        top: -80px;
+        right: -55px;
+        background-image: url('../images/line-2.svg');
+      }
+      &::after {
+        height: 40px;
+        width: 254px;
+        top: 40px;
+        right: -75px;
+        background-image: url('../images/line-3.svg');
+      }
     }
   }
   &__num {
@@ -239,7 +245,6 @@
   &__info {
     width: 300px;
     }
-  
   &__info-title {
     width: 137px;
     @extend %ubuntu-bold;
@@ -254,6 +259,39 @@
   }
 }
 
+// specification
+
+.specification {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+
+  }
+  &__box {
+    width: 280px;
+    position: relative;
+    &:first-child::before,
+    &:nth-child(2)::before,
+    &:nth-child(3)::before,
+    &:nth-child(4)::before {
+      content:'';
+      position: absolute;
+    }
+  }
+  &__box-title {
+    @extend %ubuntu-bold;
+    font-size: 21px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+  &__box-text {
+    @extend %ubuntu-light;
+    font-size: 15px;
+    line-height: 19px;
+  }
+}
 
 
 
