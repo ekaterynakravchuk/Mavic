@@ -265,20 +265,57 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-left: 55px;
   }
-  &__item {
-
+  &__item--center {
+    margin-left: -15px;
+    margin-right: -15px;
   }
   &__box {
     width: 280px;
     position: relative;
-    &:first-child::before,
-    &:nth-child(2)::before,
-    &:nth-child(3)::before,
-    &:nth-child(4)::before {
-      content:'';
+    margin-top: 20px;
+    &::before {
+      content: "";
       position: absolute;
+      background-repeat: no-repeat;
+      background-position: 0 0;
     }
+  }
+  &__box-2 {
+    margin-top: 145px;
+  }
+  &__box-4 {
+    margin-top: 155px;
+  }
+  &__box-1::before{
+    background-image: url('../images/pointer-1.svg');
+    top: 15px;
+    left: 240px;
+    width: 230px;
+    height: 115px;
+  }
+  &__box-2::before{
+    background-image: url('../images/pointer-2.svg');
+    top: -68px;
+    left: 230px;
+    width: 346px;
+    height: 81px;
+  }
+  &__box-3::before{
+    background-image: url('../images/pointer-3.svg');
+    top: 15px;
+    left: -280px;
+    width: 258px;
+    height: 104px;
+  }
+  &__box-4::before{
+    background-image: url('../images/pointer-4.svg');
+    top: -75px;
+    left: -140px;
+    width: 124px;
+    height: 90px;
   }
   &__box-title {
     @extend %ubuntu-bold;
@@ -292,7 +329,31 @@
     line-height: 19px;
   }
 }
+// questions
 
+.questions {
+  &__items {
+    max-width: 757px;
+    margin-bottom: 50px;
+  }
+  &__item {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  &__item-title {
+    max-width: 690px;
+    @extend %ubuntu-medium;
+    font-size: 21px;
+    line-height: 28px;
+    color: rgba(#fff, .8);
+    padding: 20px 40px;
+  }
+  &__item-text {
+    @extend %ubuntu-light;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 0 15px 15px 50px;
+  }
+}
 
 
 
