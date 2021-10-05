@@ -44,11 +44,19 @@
     @extend %ubuntu-bold;
   }
 }
-.menu__list {
+.menu {
+  &__list {
   display: flex;
   justify-content: space-between;
-  &-item {
+  }
+  &__list-item {
     margin: 0 10px;
+  }
+  &__list-phone {
+    display:none;
+  }
+  &__btn {
+    display: none;
   }
 }
 
